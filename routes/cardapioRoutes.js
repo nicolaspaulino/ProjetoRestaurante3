@@ -3,6 +3,15 @@ import CardapioController from '../controller/cardapio_Controller.js';
 
 const router = express.Router();
 
-router.get("/",CardapioController.listallprodutos)
+router.get("/",CardapioController.listallprodutos);
+router.get("/gerenciar",CardapioController.listallGerenciador);
+
+router.post("/addproduto",CardapioController.addProduto);
+router.get("/formAdd",CardapioController.paginagaAdd);
+
+router.get("/editar/:id", CardapioController.paginaEditar);
+router.post("/editar/:id", CardapioController.editarProduto);
+
+router.get("/excluir/:id", CardapioController.excluirProduto);
 
 export default router;

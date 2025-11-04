@@ -14,7 +14,7 @@ const Cardapio = sequelize.define('cardapio', {
        type: Sequelize.STRING,
        allowNull: false
     },
-    preço: {
+    preco: {
         type: Sequelize.DOUBLE,
         allowNull: false
      },

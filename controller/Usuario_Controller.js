@@ -38,7 +38,7 @@ const UserController = {
             
         });
         if (confirma) {
-            UserController.MenuUser(req, res);
+            res.render("principalUser",  { layout: 'mainUser' })
         } else {
             res.send("Nome ou senha incorretos!");
         }
@@ -48,8 +48,5 @@ const UserController = {
             res.status(500).send('Erro ao buscar mensagens.');
         }
     },
-    MenuUser: (req, res) => {
-        res.render("principalUser",  { layout: 'mainUser' })
-    }
 };
 export default UserController;
